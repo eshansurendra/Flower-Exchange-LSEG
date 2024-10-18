@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+}
+
+.csv-viewer {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #282828; /* Darker background for the viewer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.csv-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.csv-table th, .csv-table td {
+    padding: 12px;
+    border: 1px solid #444; /* Border color */
+}
+
+.csv-table th {
+    background-color: #3c3c3c;  /* Header background color */
+    color: white; /* Header text color */
+}
+
+.csv-table tr:nth-child(even) {
+    background-color: #3c3c3c; /* Alternate row color */
+}
+
+.csv-table tr:hover {
+    background-color: #555; /* Row hover effect */
+}
+
+.csv-table td {
+    text-align: left; /* Left align text in cells */
+}
