@@ -1,4 +1,5 @@
-ord1,aa13,Rose,2,New, 100, 55.00
-ord2,aa14,Rose,2,New, 100, 45.00
-ord3,aa15,Rose,1,Fill, 100, 45.00
-ord2,aa14,Rose,2,Fill, 100, 45.00
+ord1,aa13, Lotus,1,Reject,  55.00,,Does not contain a required field
+ord2,aa14,Rose,3,Reject, 100, 65.00,Invalid side
+ord3,aa15,Lavender,2,Reject, 101, 1.00,Invalid quantity(Not a multiply of 10)
+ord4,aa16,Tulip,1,Reject, 100, -1.00,Invalid price(Price is less than or equal to 0)
+ord5,aa17,Orchid,1,Reject, 1000, -1.00,Invalid price(Price is less than or equal to 0)

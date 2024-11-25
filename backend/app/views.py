@@ -46,6 +46,8 @@ def upload_csv(request):
 
             # Run the executable with the saved file
             subprocess.run([exe_path, file_path])
+            
+
 
             # Check if the output file was created(C:\Users\ASUS\Documents\LSEG-Flower-Exchange-App-Front\backend\execution_rep.csv)
             if not os.path.exists(r'C:\Users\ASUS\Documents\LSEG-Flower-Exchange-App-Front\backend\execution_rep.csv'):
@@ -55,7 +57,7 @@ def upload_csv(request):
             # Return a success message and output file as a response
             with open(r'C:\Users\ASUS\Documents\LSEG-Flower-Exchange-App-Front\backend\execution_rep.csv', 'rb') as f:
                 response = HttpResponse(f.read(), content_type='text/csv')
-                response['Content-Disposition'] = 'attachment; filename="execution_rep.csv"'
+                response['Content-Disposition'] = 'attachment; filename="input_report.csv"'
                 return response
 
         except Exception as e:
@@ -72,7 +74,7 @@ def test(request):
 from django.http import FileResponse
 
 def get_response_csv(request):
-    file_path = r'C:\Users\ASUS\Documents\LSEG-Flower-Exchange-App-Front\backend\execution_rep.csv'
+    file_path = r'C:\Users\ASUS\Documents\GitHub\Flower-Exchange-LSEG\backend\execution_rep.csv'
     if not os.path.exists(file_path):
         return JsonResponse({'error': 'File not found.'}, status=404)
-    return FileResponse(open(file_path, 'rb'), content_type='text/csv', as_attachment=True, filename='response.csv')
+    return FileResponse(open(file_path, 'rb'), content_type='text/csv', as_attachment=True, filename=file_path)
